@@ -1,0 +1,48 @@
+.header > .nav > .menuMobile {
+  cursor: pointer;
+  display: none;
+}
+.header > .nav > .menuMobile > .line {
+  width: 30px;
+  height: 2px;
+  background-color: #fff;
+  margin-bottom: 8px;
+}
+.header > .nav > .menuMobile:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 500px) {
+  .header > .nav > .menuMobile {
+    display: block;
+    position: absolute;
+    z-index: 100;
+    left: 90%;
+    transform: translateX(-90%);
+  }
+
+  .header > .nav > .menu {
+    position: absolute;
+    top: calc(100vh - (100vh - 86px));
+    left: -100%;
+    transform: translate(-100%, -0%);
+    background-color: #000;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8rem;
+    width: 100vw;
+    height: 100vh;
+
+    transition: 0.5s;
+  }
+
+  .header > .nav > .menu.active {
+    border-top: 1px solid #FFF;
+    left: -0%;
+    transform: translate(-0%, -0%);
+  }
+
+  .header > .nav > .menu > .link > a {
+    font-size: 1.8rem;
+  }
+}
